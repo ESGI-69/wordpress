@@ -1,0 +1,14 @@
+/wp-content/index.php
+/wp-content/languages
+/wp-content/plugins
+/wp-content/themes/index.php
+/wp-content/themes/twentytwenty
+/wp-content/themes/twentytwentyone
+/wp-content/themes/twentytwentytwo
+/wp-content/upgrade
+/wp-content/uploads
+
+
+node_modules
+package-lock.json
+mix-manifest.json
