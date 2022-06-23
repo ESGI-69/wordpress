@@ -7,6 +7,8 @@ add_theme_support('custom-logo');
 // Support d'image mise en avant
 add_theme_support( 'post-thumbnails' );
 
+add_theme_support( 'widgets' );
+
 // enregistrer un emplacement de menu
 function registerMenus(){
 	register_nav_menus( array(
@@ -20,6 +22,12 @@ add_action( 'after_setup_theme', 'registerMenus', 0 );
 // Mettre les assets css en file d'attente
 function add_theme_css_and_js(){
 	wp_enqueue_style('main-css', get_stylesheet_uri());
+	wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/main.js');
+	// Injection d'une variable dans le js
+	$variables = [
+		'ajaxURL' => admin_url('admin-ajax.php')
+	];
+	wp_localize_script('main-js', 'esgi', $variables);
 }
 add_action('wp_enqueue_scripts', 'add_theme_css_and_js');
 
@@ -47,7 +55,123 @@ function getIcon($icon){
 
 }
 
+// Ajouter des paramètres au thème
+
+
+add_action('customize_register','esgi_customize_register');
+function esgi_customize_register($wp_customize) {
+	// Ajouter une section
+	$wp_customize->add_section( 'custom_esgi', array(
+	  'title' => __( 'Personnalisation du thème ESGI' ),
+	  'description' => __( 'Quelques réglages bien utiles :)' ),
+	  'priority' => 1,
+	) );
+
+	// Ajouter un setting main-color
+	$wp_customize->add_setting( 'main-color', array(
+	  'type' => 'theme_mod', // or 'option'
+	  'transport' => 'refresh', // or postMessage
+	  'sanitize_callback' => 'sanitize_hex_color',
+	  'default' => '#3F51B5'
+	) );
+
+	// Ajouter le control
+	$wp_customize->add_control(
+	  new WP_Customize_Color_Control(
+	    $wp_customize, // WP_Customize_Manager
+	    'main-color', // Setting id
+	    array( // Args, including any custom ones.
+	      'label' => __( 'Couleur principale' ),
+	      'section' => 'custom_esgi',
+	    )
+	  )
+	);
+
+	// Ajouter un setting main-color
+	$wp_customize->add_setting( 'is_dark', array(
+	  'type' => 'theme_mod', // or 'option'
+	  'transport' => 'refresh', // or postMessage
+	  'sanitize_callback' => 'sanitize_boolean',
+	  'default' => false
+	) );
+
+	$wp_customize->add_control( 'is_dark', array(
+	  'type' => 'checkbox',
+	  'section' => 'custom_esgi', // Required, core or custom.
+	  'label' => __( 'Mode sombre' ),
+	) );
+
+	// Ajouter un setting has_sidebar
+	$wp_customize->add_setting( 'has_sidebar', array(
+	  'type' => 'theme_mod', // or 'option'
+	  'transport' => 'refresh', // or postMessage
+	  'sanitize_callback' => 'sanitize_boolean',
+	  'default' => false
+	) );
+
+	$wp_customize->add_control( 'has_sidebar', array(
+	  'type' => 'checkbox',
+	  'section' => 'custom_esgi', // Required, core or custom.
+	  'label' => __( 'Afficher la barre latérale sur les pages articles' ),
+	) );
+}
+
+function sanitize_boolean($value){
+	return isset($value) && $value == true ? true : false;
+}
+
+// Appliquer les paramètres du thème
+function esgi_css_output() {
+	$main_color = get_theme_mod('main-color', '#3F51B5');
+  	echo '<style type="text/css">
+  			html{
+  				--main-color: ' . $main_color . ';
+  			}
+  		</style>';
+}
+add_action( 'wp_head', 'esgi_css_output');
+
+
+// 'surcharger le filtre body_class'
+add_filter('body_class', 'esgi_body_class');
+
+function esgi_body_class($classes){
+	$is_dark = get_theme_mod('is_dark', false);
+	if($is_dark){
+		$classes[] = 'dark';
+	}
+	return $classes;
+}
 
 
 
+// WIDGETS
+
+add_action('widgets_init', 'esgi_register_widget');
+function esgi_register_widget(){
+	if ( function_exists('register_sidebar') )
+	  register_sidebar([
+	  	'id' => 'zone-1',
+	    'name' => 'Zone des widgets de la sidebar',
+	    'before_widget' => '<div class = "widget-zone">',
+	    'after_widget' => '</div>',
+	    'before_title' => '<h3>',
+	    'after_title' => '</h3>',
+	  ]
+	);
+}
+
+
+// ROUTES AJAX (hooks wp_ajax_XXX, wp_ajax_nopriv_XXX)
+add_action( 'wp_ajax_load_posts', 'esgi_ajax_load_posts' );
+add_action( 'wp_ajax_nopriv_load_posts', 'esgi_ajax_load_posts' );
+
+function esgi_ajax_load_posts(){
+	$paged = $_POST['page'];
+	// Mise en buffer
+	ob_start();
+	include('template-parts/post-list.php');
+	echo ob_get_clean();
+	wp_die();
+}
 

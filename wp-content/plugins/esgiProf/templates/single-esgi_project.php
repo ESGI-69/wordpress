@@ -3,6 +3,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 offset-md-3">
+				SINGLE PROJECT
 				<article class="single-post">
 					<header>
 						<h1 class="post-title"><?php the_title() ?></h1>
