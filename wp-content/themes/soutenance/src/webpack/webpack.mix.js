@@ -13,12 +13,11 @@ let mix = require('laravel-mix');
 
 mix.setPublicPath('../dist');
 
-// mix.babel([
-//   '../src/js/vendor/chart.min.js',
-//  '../src/js/main.js'
-// ], '../dist/main.js');
+mix.babel([
+ '../js/main.js'
+], '../../assets/js/main.js');
 
-// mix.minify('../web/dist/main.js');
+mix.minify('../../assets/js/main.js');
 
 mix.sass('../scss/style.scss', '../../')
 .options({

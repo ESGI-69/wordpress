@@ -1,0 +1,42 @@
+.site-header {
+  width: 100%;
+  height: rem(135);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: rem(0) rem(160);
+
+  .hidden-menu {
+    width: 100%;
+    height: rem(820);
+    position: fixed;
+    z-index: 1;
+    top: -820px;
+    right: 0px;
+    box-sizing: border-box;
+    background-color: $main-color;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    border-left: 1px solid #EDF6F9;
+  }
+
+  .--open {
+    top: 0;
+  }
+
+  &__figure {
+    .custom-logo {
+      max-height: rem(36);
+      width: auto;
+    }
+  }
+
+  &__button-nav {
+    height: fit-content;
+    width: fit-content;
+    background-color: white;
+    border: none;
+  }
+}
