@@ -1,0 +1,34 @@
+.search-form {
+  position: relative;
+  width: fit-content;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+
+  input {
+    padding: 0 0 rem(8) 0;
+    margin: 0;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.297722);
+    background: transparent;
+    font-size: 20px;
+    width: rem(1050);
+    color: $white;
+
+    &::placeholder {
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.47);
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  .icon {
+    position: absolute;
+    right: 0;
+    top: 5px;
+  }
+}
