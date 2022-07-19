@@ -16,12 +16,12 @@
   position: relative;
 
   .hidden-menu {
-    padding: 50px 155px 100px 155px;
+    padding: rem(50) rem(160) rem(100) rem(160);
     position: absolute;
     display: flex;
     flex-direction: column;
-    z-index: 1;
-    top: -820px;
+    z-index: -1;
+    top: -100vh;
     right: 0px;
     box-sizing: border-box;
     background-color: $main-color;
@@ -90,6 +90,7 @@
 
   .--open {
     top: 0;
+    z-index: 100;
   }
 
   &__figure {
