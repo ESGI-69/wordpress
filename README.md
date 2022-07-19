@@ -1,5 +1,8 @@
 # Wordpress
 
+## Soutenance
+Le thème de du projet pour la soutenance est contenu dans le dossier soutenance
+
 ## Installation
 
 ```sh

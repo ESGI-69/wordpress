@@ -207,10 +207,6 @@ function esgi_body_class($classes)
   return $classes;
 }
 $test= get_theme_mod('twitter_link');
-echo "test ";
-var_dump($test);
-
-
 
 // WIDGETS
 
