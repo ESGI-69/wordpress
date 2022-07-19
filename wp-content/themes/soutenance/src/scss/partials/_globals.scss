@@ -9,16 +9,17 @@ $grey: #8A8A8A;
 $lightgrey: #AAA;
 $black: #000;
 
-html{
+html {
 	--text-color: #{$text-color};
+	--text-color--secondary: #{$white};
 	--main-color: #{$main-color};
 	--grey: #{$grey};
 	--light-grey: #{$lightgrey};
 	--bg-color: #{$white};
-	font-family: $font1;
 }
 
 body {
+	font-family: $font1;
   background-color: var(--bg-color);
   color: var(--text-color);
 

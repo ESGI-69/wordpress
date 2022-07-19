@@ -11,23 +11,28 @@
   <header id="site-header" class="site-header">
     <div id="hidden-menu" class="hidden-menu">
       <div class="hidden-menu__container">
-        <img src="../soutenance/assets/images/esgi-white.png" alt="">
+        <img src="http://localhost/wp-content/uploads/2022/07/unknown.png" alt="">
         <button id="closebtn" class="site-header__button-nav">
           <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="white" viewBox="0 0 24 24" stroke="white" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
       </div>
-      <?php
-      // Afficher le menu principal
-      if (has_nav_menu('primary_menu')) {
-        wp_nav_menu([
-          'theme_location' => 'primary_menu',
-          'container' => 'nav',
-          'container_class' => 'main-nav'
-        ]);
-      }
-      ?>
+      <div class="nav">
+        <span class="search">
+          Or try Search
+        </span>
+        <?php
+        // Afficher le menu principal
+        if (has_nav_menu('primary_menu')) {
+          wp_nav_menu([
+            'theme_location' => 'primary_menu',
+            'container' => 'nav',
+            'container_class' => 'main-nav'
+          ]);
+        }
+        ?>
+      </div>
     </div>
     <figure class="site-header__figure">
       <?= get_custom_logo() ?>
