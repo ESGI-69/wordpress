@@ -11,10 +11,11 @@
   <header id="site-header" class="site-header">
     <div id="hidden-menu" class="hidden-menu">
       <div class="hidden-menu__container">
-        <img src="<?= get_theme_mod( "soutenance_logo-bis" ) ?>" alt="" srcset="">
+        <img src="<?= get_theme_mod("soutenance_logo-bis") ?>" alt="" srcset="">
         <button id="closebtn" class="site-header__button-nav">
-          <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="white" viewBox="0 0 24 24" stroke="white" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+            <rect x="2.13605" y="0.0147705" width="21" height="3" transform="rotate(45 2.13605 0.0147705)" fill="white" />
+            <rect x="16.9706" y="2.12134" width="21" height="3" transform="rotate(135 16.9706 2.12134)" fill="white" />
           </svg>
         </button>
       </div>
@@ -38,8 +39,9 @@
       <?= get_custom_logo() ?>
     </figure>
     <button id="burgerMenu" class="site-header__button-nav">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" width="40" height="40" fill="#050A3A" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="10" viewBox="0 0 40 10" fill="none">
+        <rect width="40" height="3" fill="#050A3A" />
+        <rect x="19" y="7" width="21" height="3" fill="#050A3A" />
       </svg>
     </button>
   </header>
