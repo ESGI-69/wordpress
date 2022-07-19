@@ -404,12 +404,12 @@ body.dark {
   position: relative;
 }
 .site-header .hidden-menu {
-  padding: 50px 155px 100px 155px;
+  padding: 3.125rem 10rem 6.25rem 10rem;
   position: absolute;
   display: flex;
   flex-direction: column;
-  z-index: 1;
-  top: -820px;
+  z-index: -1;
+  top: -100vh;
   right: 0px;
   box-sizing: border-box;
   background-color: #050A3A;
@@ -467,6 +467,7 @@ body.dark {
 }
 .site-header .\--open {
   top: 0;
+  z-index: 100;
 }
 .site-header__figure .custom-logo {
   max-height: 2.25rem;
@@ -481,4 +482,63 @@ body.dark {
   width: fit-content;
   background-color: unset;
   border: none;
+}
+
+body.error404 {
+  background-color: #050A3A;
+  color: #ffffff;
+}
+body.error404 main {
+  padding: 0 10rem;
+}
+body.error404 main h1 {
+  font-weight: 600;
+  font-size: 84px;
+  margin-top: 4.875rem;
+  margin-bottom: 3rem;
+}
+body.error404 main p {
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+
+.search-form {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media screen and (max-width: 768px) {
+  .search-form {
+    width: 100%;
+  }
+}
+.search-form input {
+  padding: 0 0 0.5rem 0;
+  margin: 0;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.297722);
+  background: transparent;
+  font-size: 20px;
+  width: 65.625rem;
+  color: #ffffff;
+}
+.search-form input::-moz-placeholder {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.47);
+}
+.search-form input::placeholder {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.47);
+}
+@media screen and (max-width: 768px) {
+  .search-form input {
+    width: 100%;
+  }
+}
+.search-form .icon {
+  position: absolute;
+  right: 0;
+  top: 5px;
 }
