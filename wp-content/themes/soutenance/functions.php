@@ -2,11 +2,12 @@
 
 add_theme_support('custom-logo');
 
+add_theme_support( 'post-thumbnails' );
+
 function registerMenus()
 {
   register_nav_menus(array(
     'primary_menu' => __('Primary Menu', 'text_domain'),
-    'footer_menu'  => __('Footer Menu', 'text_domain'),
   ));
 }
 
@@ -260,6 +261,107 @@ function soutenance_customize_register($wp_customize)
       )
     )
   );
+
+  $wp_customize->add_panel('desc_panel', array(
+    'title' => 'Company description',
+    'description' => 'Describe your company',
+    'priority' => 40,
+  ));
+
+  $wp_customize->add_section('desc_imgs', array(
+    'title' => 'Image',
+    'priority' => 10,
+    'panel' => 'desc_panel',
+  ));
+
+  $wp_customize->add_setting('img_desc', array());
+
+  $wp_customize->add_control(
+    new WP_Customize_Image_Control(
+      $wp_customize,
+      'img_desc',
+      array(
+        'label'      => 'Photo',
+        'section'    => 'desc_imgs',
+        'settings'   => 'img_desc',
+      )
+    )
+  );
+
+  $wp_customize->add_section('desc_first', array(
+    'title' => 'First paragraph',
+    'priority' => 10,
+    'panel' => 'desc_panel',
+  ));
+
+  $wp_customize->add_setting('title_desc_first', array());
+  $wp_customize->add_setting('paragraph_desc_first', array());
+
+  $wp_customize->add_control('title_desc_first', array(
+    'label' => 'Title',
+    'type' => 'text',
+    'section' => 'desc_first',
+    'settings' => 'title_desc_first'
+  ));
+
+  $wp_customize->add_control('paragraph_desc_first', array(
+    'label' => 'Paragraph',
+    'type' => 'textarea',
+    'section' => 'desc_first',
+    'settings' => 'paragraph_desc_first'
+  ));
+
+  $wp_customize->add_section('desc_second', array(
+    'title' => 'Second paragraph',
+    'priority' => 20,
+    'panel' => 'desc_panel',
+  ));
+
+  $wp_customize->add_setting('title_desc_second', array());
+  $wp_customize->add_setting('paragraph_desc_second', array());
+
+  $wp_customize->add_control('title_desc_second', array(
+    'label' => 'Title',
+    'type' => 'text',
+    'section' => 'desc_second',
+    'settings' => 'title_desc_second'
+  ));
+
+  $wp_customize->add_control('paragraph_desc_second', array(
+    'label' => 'Paragraph',
+    'type' => 'textarea',
+    'section' => 'desc_second',
+    'settings' => 'paragraph_desc_second'
+  ));
+
+  $wp_customize->add_section('desc_third', array(
+    'title' => 'Third paragraph',
+    'priority' => 30,
+    'panel' => 'desc_panel',
+  ));
+
+  $wp_customize->add_setting('title_desc_third', array());
+  $wp_customize->add_setting('paragraph_desc_third', array());
+
+  $wp_customize->add_control('title_desc_third', array(
+    'label' => 'Title',
+    'type' => 'text',
+    'section' => 'desc_third',
+    'settings' => 'title_desc_third'
+  ));
+
+  $wp_customize->add_control('paragraph_desc_third', array(
+    'label' => 'Paragraph',
+    'type' => 'textarea',
+    'section' => 'desc_third',
+    'settings' => 'paragraph_desc_third'
+  ));
+  
+  $wp_customize->add_section('desc_third', array(
+    'title' => 'Third paragraph',
+    'priority' => 30,
+    'panel' => 'desc_panel',
+  ));
 
 }
 add_action('customize_register', 'soutenance_customize_register');
