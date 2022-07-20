@@ -13,6 +13,11 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: rem(16);
+    }
   
     span {
       color: $white;
@@ -21,11 +26,21 @@ footer {
     img {
       max-height: rem(36);
       width: auto;
+
+      @media screen and (max-width: 768px) {
+        max-height: auto;
+        width: rem(180);
+      }
     }
 
     .team-footer {
       display: flex;
       gap: rem(100);
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        gap: rem(32);
+      }
       
       .team-member {
         display: flex;

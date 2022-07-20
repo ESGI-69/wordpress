@@ -1,0 +1,56 @@
+body.page {
+  .page-title {
+    padding: rem(0) rem(160);
+    margin-bottom: rem(129);
+    font-size: rem(84);
+    font-weight: 600;
+    color: $text-color;
+
+    @media screen and (max-width: 768px) {
+      padding: rem(0) rem(24);
+    }
+  }
+
+  .page-image {
+    margin-top: rem(100);
+    margin-bottom: rem(132);
+    
+    .attachment-post-thumbnail {
+      width: 75%;
+      height: auto;
+      margin-left: calc(100% - 75%);
+
+      @media screen and (max-width: 768px) {
+        width: 100vw;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .page-content {
+    padding: rem(0) rem(160);
+    margin-bottom: rem(129);
+
+    @media screen and (max-width: 768px) {
+      padding: rem(0) 1.5rem;
+    }
+
+    h2 {
+      font-size: rem(63);
+      font-weight: 600;
+      margin-bottom: rem(16);
+    }
+
+    h3 {
+      font-size: rem(47);
+      font-weight: 600;
+      margin-bottom: rem(20);
+    }
+
+    p {
+      font-size: rem(26);
+      font-weight: 400;
+      color: $grey;
+    }
+  }
+}

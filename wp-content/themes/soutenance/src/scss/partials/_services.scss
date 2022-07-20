@@ -1,0 +1,44 @@
+.our-services {
+  margin-top: rem(132);
+
+  h2 {
+    font-size: rem(63);
+    font-weight: 600;
+    margin-bottom: rem(64);
+    padding: rem(0) rem(160);
+
+    @media screen and (max-width: 768px) {
+      padding: rem(0) 1.5rem;
+    }
+  }
+
+  .services {
+    display: flex;
+
+    a {
+      width: 25vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      img {
+        width: 25vw;
+        height: auto;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      
+      a {
+        width: 100vw;
+        height: auto;
+
+        img {
+          width: 100vw;
+          height: auto;
+        }
+      }
+    }
+  }
+}
