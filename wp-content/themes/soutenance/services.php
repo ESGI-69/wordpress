@@ -6,6 +6,6 @@
 <div class="page-content">
   <?php the_content() ?>
 </div>
-<img src="<?= get_theme_mod('image_services_page') ?>" alt="">
+<img class="image-service" src="<?= get_theme_mod('image_services_page') ?>" alt="">
 
 <?php get_footer() ?>
