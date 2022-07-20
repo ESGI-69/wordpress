@@ -363,5 +363,276 @@ function soutenance_customize_register($wp_customize)
     'panel' => 'desc_panel',
   ));
 
+  $wp_customize->add_panel('our_services', array(
+    'title' => 'Our services',
+    'description' => 'Describe your services',
+    'priority' => 40,
+  ));
+
+  $wp_customize->add_section('first_services_block', array(
+    'title' => 'First Block',
+    'priority' => 30,
+    'panel' => 'our_services',
+  ));
+
+  $wp_customize->add_setting('link_first_services', array());
+  $wp_customize->add_setting('image_first_services', array());
+  $wp_customize->add_setting('text_first_services', array());
+
+  $wp_customize->add_control('link_first_services', array(
+    'label' => 'Page Link',
+    'type' => 'dropdown-pages',
+    'section' => 'first_services_block',
+    'settings' => 'link_first_services'
+  ));
+  $wp_customize->add_control(
+    new WP_Customize_Image_Control(
+      $wp_customize,
+      'image_first_services',
+      array(
+        'label'      => 'Image',
+        'description' => 'Leave empty if you only want the text',
+        'section'    => 'first_services_block',
+        'settings'   => 'image_first_services',
+      )
+    )
+  );
+  $wp_customize->add_control('text_first_services', array(
+    'label' => 'Text',
+    'description' => 'Leave empty if you only want the image',
+    'type' => 'text',
+    'section' => 'first_services_block',
+    'settings' => 'text_first_services'
+  ));
+
+  $wp_customize->add_section('fourth_services_block', array(
+    'title' => 'First Block',
+    'priority' => 30,
+    'panel' => 'our_services',
+  ));
+
+  $wp_customize->add_setting('link_fourth_services', array());
+  $wp_customize->add_setting('image_fourth_services', array());
+  $wp_customize->add_setting('text_fourth_services', array());
+
+  $wp_customize->add_control('link_fourth_services', array(
+    'label' => 'Page Link',
+    'type' => 'dropdown-pages',
+    'section' => 'fourth_services_block',
+    'settings' => 'link_fourth_services'
+  ));
+  $wp_customize->add_control(
+    new WP_Customize_Image_Control(
+      $wp_customize,
+      'image_fourth_services',
+      array(
+        'label'      => 'Image',
+        'description' => 'Leave empty if you only want the text',
+        'section'    => 'second_services_block',
+        'settings'   => 'image_second_services',
+      )
+    )
+  );
+  $wp_customize->add_control('text_second_services', array(
+    'label' => 'Text',
+    'description' => 'Leave empty if you only want the image',
+    'type' => 'text',
+    'section' => 'second_services_block',
+    'settings' => 'text_second_services'
+  ));
+
+
+  $wp_customize->add_section('second_services_block', array(
+    'title' => 'Second Block',
+    'priority' => 30,
+    'panel' => 'our_services',
+  ));
+
+  $wp_customize->add_setting('link_second_services', array());
+  $wp_customize->add_setting('image_second_services', array());
+  $wp_customize->add_setting('text_second_services', array());
+
+  $wp_customize->add_control('link_second_services', array(
+    'label' => 'Page Link',
+    'type' => 'dropdown-pages',
+    'section' => 'second_services_block',
+    'settings' => 'link_second_services'
+  ));
+  $wp_customize->add_control(
+    new WP_Customize_Image_Control(
+      $wp_customize,
+      'image_second_services',
+      array(
+        'label'      => 'Image',
+        'description' => 'Leave empty if you only want the text',
+        'section'    => 'second_services_block',
+        'settings'   => 'image_second_services',
+      )
+    )
+  );
+  $wp_customize->add_control('text_second_services', array(
+    'label' => 'Text',
+    'description' => 'Leave empty if you only want the image',
+    'type' => 'text',
+    'section' => 'second_services_block',
+    'settings' => 'text_second_services'
+  ));
+
+  $wp_customize->add_section('third_services_block', array(
+    'title' => 'Third Block',
+    'priority' => 30,
+    'panel' => 'our_services',
+  ));
+
+  $wp_customize->add_setting('link_third_services', array());
+  $wp_customize->add_setting('image_third_services', array());
+  $wp_customize->add_setting('text_third_services', array());
+
+  $wp_customize->add_control('link_third_services', array(
+    'label' => 'Page Link',
+    'type' => 'dropdown-pages',
+    'section' => 'third_services_block',
+    'settings' => 'link_third_services'
+  ));
+  $wp_customize->add_control(
+    new WP_Customize_Image_Control(
+      $wp_customize,
+      'image_third_services',
+      array(
+        'label'      => 'Image',
+        'description' => 'Leave empty if you only want the text',
+        'section'    => 'third_services_block',
+        'settings'   => 'image_third_services',
+      )
+    )
+  );
+  $wp_customize->add_control('text_third_services', array(
+    'label' => 'Text',
+    'description' => 'Leave empty if you only want the image',
+    'type' => 'text',
+    'section' => 'third_services_block',
+    'settings' => 'text_third_services'
+  ));
+
+  $wp_customize->add_section('fourth_services_block', array(
+    'title' => 'Fourth Block',
+    'priority' => 30,
+    'panel' => 'our_services',
+  ));
+
+  $wp_customize->add_setting('link_fourth_services', array());
+  $wp_customize->add_setting('image_fourth_services', array());
+  $wp_customize->add_setting('text_fourth_services', array());
+
+  $wp_customize->add_control('link_fourth_services', array(
+    'label' => 'Page Link',
+    'type' => 'dropdown-pages',
+    'section' => 'fourth_services_block',
+    'settings' => 'link_fourth_services'
+  ));
+  $wp_customize->add_control(
+    new WP_Customize_Image_Control(
+      $wp_customize,
+      'image_fourth_services',
+      array(
+        'label'      => 'Image',
+        'description' => 'Leave empty if you only want the text',
+        'section'    => 'fourth_services_block',
+        'settings'   => 'image_fourth_services',
+      )
+    )
+  );
+  $wp_customize->add_control('text_fourth_services', array(
+    'label' => 'Text',
+    'description' => 'Leave empty if you only want the image',
+    'type' => 'text',
+    'section' => 'fourth_services_block',
+    'settings' => 'text_fourth_services'
+  ));
+
+  $wp_customize->add_section('partners_section', array(
+    'title' => 'Partners',
+    'priority' => 40,
+  ));
+  $wp_customize->add_setting('partners_first', array());
+  $wp_customize->add_setting('partners_second', array());
+  $wp_customize->add_setting('partners_third', array());
+  $wp_customize->add_setting('partners_fourth', array());
+  $wp_customize->add_setting('partners_fifth', array());
+  $wp_customize->add_setting('partners_sixth', array());
+
+  $wp_customize->add_control(
+    new WP_Customize_Image_Control(
+      $wp_customize,
+      'partners_first',
+      array(
+        'label'      => 'First Partners',
+        'section'    => 'partners_section',
+        'settings'   => 'partners_first',
+      )
+    )
+  );
+
+  $wp_customize->add_control(
+    new WP_Customize_Image_Control(
+      $wp_customize,
+      'partners_second',
+      array(
+        'label'      => 'Second Partners',
+        'section'    => 'partners_section',
+        'settings'   => 'partners_second',
+      )
+    )
+  );
+
+  $wp_customize->add_control(
+    new WP_Customize_Image_Control(
+      $wp_customize,
+      'partners_third',
+      array(
+        'label'      => 'Third Partners',
+        'section'    => 'partners_section',
+        'settings'   => 'partners_third',
+      )
+    )
+  );
+
+  $wp_customize->add_control(
+    new WP_Customize_Image_Control(
+      $wp_customize,
+      'partners_fourth',
+      array(
+        'label'      => 'Fourth Partners',
+        'section'    => 'partners_section',
+        'settings'   => 'partners_fourth',
+      )
+    )
+  );
+
+  $wp_customize->add_control(
+    new WP_Customize_Image_Control(
+      $wp_customize,
+      'partners_fifth',
+      array(
+        'label'      => 'Fifth Partners',
+        'section'    => 'partners_section',
+        'settings'   => 'partners_fifth',
+      )
+    )
+  );
+
+  $wp_customize->add_control(
+    new WP_Customize_Image_Control(
+      $wp_customize,
+      'partners_sixth',
+      array(
+        'label'      => 'Sixth Partners',
+        'section'    => 'partners_section',
+        'settings'   => 'partners_sixth',
+      )
+    )
+  );
+
+
 }
 add_action('customize_register', 'soutenance_customize_register');
