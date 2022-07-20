@@ -102,162 +102,195 @@ function soutenance_customize_register($wp_customize)
     'priority' => 40,
   ));
 
-  $wp_customize->add_section('ceo', array(
-    'title' => 'CEO',
+  $wp_customize->add_section('role_one', array(
+    'title' => 'Role One',
     'priority' => 10,
     'panel' => 'team_panel',
   ));
 
-  $wp_customize->add_setting('phone_ceo', array());
-  $wp_customize->add_setting('email_ceo', array());
-  $wp_customize->add_setting('photo_ceo', array());
+  $wp_customize->add_setting('phone_role_one', array());
+  $wp_customize->add_setting('email_role_one', array());
+  $wp_customize->add_setting('photo_role_one', array());
+  $wp_customize->add_setting('name_role_one', array());
 
-  $wp_customize->add_control('phone_ceo', array(
+  $wp_customize->add_control('phone_role_one', array(
     'label' => 'Phone Number',
     'type' => 'tel',
-    'section' => 'ceo',
-    'settings' => 'phone_ceo',
+    'section' => 'role_one',
+    'settings' => 'phone_role_one',
     'input_attrs' => array(
       'placeholder' => '+33 6 XX XX XX XX',
       'pattern' => "^0[1-9]([-. ]?[0-9]{2}){4}$"
     )
   ));
 
-  $wp_customize->add_control('email_ceo', array(
+  $wp_customize->add_control('email_role_one', array(
     'label' => 'Email',
     'type' => 'email',
-    'section' => 'ceo',
-    'settings' => 'email_ceo',
+    'section' => 'role_one',
+    'settings' => 'email_role_one',
+  ));
+
+  $wp_customize->add_control('name_role_one', array(
+    'label' => 'Role name',
+    'type' => 'text',
+    'section' => 'role_one',
+    'settings' => 'name_role_one',
   ));
 
   $wp_customize->add_control(
     new WP_Customize_Image_Control(
       $wp_customize,
-      'photo_ceo',
+      'photo_role_one',
       array(
         'label'      => 'Photo',
-        'section'    => 'ceo',
-        'settings'   => 'photo_ceo',
+        'section'    => 'role_one',
+        'settings'   => 'photo_role_one',
       )
     )
   );
 
-  $wp_customize->add_section('designer', array(
-    'title' => 'Designer',
+  $wp_customize->add_section('role_two', array(
+    'title' => 'Role Two',
     'priority' => 10,
     'panel' => 'team_panel',
   ));
 
-  $wp_customize->add_setting('phone_designer', array());
-  $wp_customize->add_setting('email_designer', array());
-  $wp_customize->add_setting('photo_designer', array());
+  $wp_customize->add_setting('phone_role_two', array());
+  $wp_customize->add_setting('email_role_two', array());
+  $wp_customize->add_setting('name_role_two', array());
+  $wp_customize->add_setting('photo_role_two', array());
 
-  $wp_customize->add_control('phone_designer', array(
+  $wp_customize->add_control('phone_role_two', array(
     'label' => 'Phone Number',
     'type' => 'tel',
-    'section' => 'designer',
-    'settings' => 'phone_designer',
+    'section' => 'role_two',
+    'settings' => 'phone_role_two',
     'input_attrs' => array(
       'placeholder' => '+33 6 XX XX XX XX',
       'pattern' => "^0[1-9]([-. ]?[0-9]{2}){4}$"
     )
   ));
 
-  $wp_customize->add_control('email_designer', array(
+  $wp_customize->add_control('email_role_two', array(
     'label' => 'Email',
     'type' => 'email',
-    'section' => 'designer',
-    'settings' => 'email_designer',
+    'section' => 'role_two',
+    'settings' => 'email_role_two',
   ));
+
+  $wp_customize->add_control('name_role_two', array(
+    'label' => 'Role name',
+    'type' => 'text',
+    'section' => 'role_two',
+    'settings' => 'name_role_two',
+  ));
+
 
   $wp_customize->add_control(
     new WP_Customize_Image_Control(
       $wp_customize,
-      'photo_designer',
+      'photo_role_two',
       array(
         'label'      => 'Photo',
-        'section'    => 'designer',
-        'settings'   => 'photo_designer',
+        'section'    => 'role_two',
+        'settings'   => 'photo_role_two',
       )
     )
   );
 
-  $wp_customize->add_section('eventp', array(
-    'title' => 'Event planner',
+  $wp_customize->add_section('role_three', array(
+    'title' => 'Role Three',
     'priority' => 10,
     'panel' => 'team_panel',
   ));
 
-  $wp_customize->add_setting('phone_eventp', array());
-  $wp_customize->add_setting('email_eventp', array());
-  $wp_customize->add_setting('photo_eventp', array());
+  $wp_customize->add_setting('phone_role_three', array());
+  $wp_customize->add_setting('email_role_three', array());
+  $wp_customize->add_setting('photo_role_three', array());
+  $wp_customize->add_setting('name_role_three', array());
 
-  $wp_customize->add_control('phone_eventp', array(
+  $wp_customize->add_control('phone_role_three', array(
     'label' => 'Phone Number',
     'type' => 'tel',
-    'section' => 'eventp',
-    'settings' => 'phone_eventp',
+    'section' => 'role_three',
+    'settings' => 'phone_role_three',
     'input_attrs' => array(
       'placeholder' => '+33 6 XX XX XX XX',
       'pattern' => "^0[1-9]([-. ]?[0-9]{2}){4}$"
     )
   ));
 
-  $wp_customize->add_control('email_eventp', array(
+  $wp_customize->add_control('email_role_three', array(
     'label' => 'Email',
     'type' => 'email',
-    'section' => 'eventp',
-    'settings' => 'email_eventp',
+    'section' => 'role_three',
+    'settings' => 'email_role_three',
+  ));
+
+  $wp_customize->add_control('name_role_three', array(
+    'label' => 'Role Name',
+    'type' => 'text',
+    'section' => 'role_three',
+    'settings' => 'name_role_three',
   ));
 
   $wp_customize->add_control(
     new WP_Customize_Image_Control(
       $wp_customize,
-      'photo_eventp',
+      'photo_role_three',
       array(
         'label'      => 'Photo',
-        'section'    => 'eventp',
-        'settings'   => 'photo_eventp',
+        'section'    => 'role_three',
+        'settings'   => 'photo_role_three',
       )
     )
   );
 
-  $wp_customize->add_section('manager', array(
-    'title' => 'Manager',
+  $wp_customize->add_section('role_fourth', array(
+    'title' => 'Role Fourth',
     'priority' => 10,
     'panel' => 'team_panel',
   ));
 
-  $wp_customize->add_setting('phone_manager', array());
-  $wp_customize->add_setting('email_manager', array());
-  $wp_customize->add_setting('photo_manager', array());
+  $wp_customize->add_setting('phone_role_fourth', array());
+  $wp_customize->add_setting('email_role_fourth', array());
+  $wp_customize->add_setting('photo_role_fourth', array());
+  $wp_customize->add_setting('name_role_fourth', array());
 
-  $wp_customize->add_control('phone_manager', array(
+  $wp_customize->add_control('phone_role_fourth', array(
     'label' => 'Phone Number',
     'type' => 'tel',
-    'section' => 'manager',
-    'settings' => 'phone_manager',
+    'section' => 'role_fourth',
+    'settings' => 'phone_role_fourth',
     'input_attrs' => array(
       'placeholder' => '+33 6 XX XX XX XX',
       'pattern' => "^0[1-9]([-. ]?[0-9]{2}){4}$"
     )
   ));
 
-  $wp_customize->add_control('email_manager', array(
+  $wp_customize->add_control('email_role_fourth', array(
     'label' => 'Email',
     'type' => 'email',
-    'section' => 'manager',
-    'settings' => 'email_manager',
+    'section' => 'role_fourth',
+    'settings' => 'email_role_fourth',
+  ));
+
+  $wp_customize->add_control('name_role_fourth', array(
+    'label' => 'Role Name',
+    'type' => 'text',
+    'section' => 'role_fourth',
+    'settings' => 'name_role_fourth',
   ));
 
   $wp_customize->add_control(
     new WP_Customize_Image_Control(
       $wp_customize,
-      'photo_manager',
+      'photo_role_fourth',
       array(
         'label'      => 'Photo',
-        'section'    => 'manager',
-        'settings'   => 'photo_manager',
+        'section'    => 'role_fourth',
+        'settings'   => 'photo_role_fourth',
       )
     )
   );
@@ -368,6 +401,26 @@ function soutenance_customize_register($wp_customize)
     'description' => 'Describe your services',
     'priority' => 40,
   ));
+
+  $wp_customize->add_section('images_services_page', array(
+    'title' => 'Image for the Page',
+    'priority' => 50,
+    'panel' => 'our_services',
+  ));
+
+  $wp_customize->add_setting('image_services_page', array());
+
+  $wp_customize->add_control(
+    new WP_Customize_Image_Control(
+      $wp_customize,
+      'image_services_page',
+      array(
+        'label'      => 'Image',
+        'section'    => 'images_services_page',
+        'settings'   => 'image_services_page',
+      )
+    )
+  );
 
   $wp_customize->add_section('first_services_block', array(
     'title' => 'First Block',
@@ -632,7 +685,6 @@ function soutenance_customize_register($wp_customize)
       )
     )
   );
-
 
 }
 add_action('customize_register', 'soutenance_customize_register');
