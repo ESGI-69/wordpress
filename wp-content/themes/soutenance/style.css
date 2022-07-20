@@ -655,6 +655,10 @@ body.error404 main p {
   color: #8A8A8A;
 }
 
+.page-template-services .our-services h2 {
+  display: none;
+}
+
 .our-services {
   margin-top: 8.25rem;
 }
@@ -727,6 +731,10 @@ body.error404 main p {
   }
 }
 
+.image {
+  width: 100vw;
+}
+
 body.page .page-title {
   padding: 0rem 10rem;
   margin-bottom: 8.0625rem;
@@ -781,4 +789,12 @@ body.page .page-content p {
 
 body.page.home .page-image {
   margin-top: 100px;
+}
+
+.page-template-services-php .page-content h2 {
+  margin-top: 131px;
+}
+.page-template-services-php .image-service {
+  width: 100vw;
+  height: auto;
 }
