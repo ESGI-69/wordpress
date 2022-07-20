@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header('dark'); ?>
 <main id="site-content">
   
 </main>
