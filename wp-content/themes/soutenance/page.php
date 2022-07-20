@@ -1,4 +1,4 @@
-<?php get_header() ?>
+<?php get_header('dark') ?>
 <h1 class="page-title"><?php the_title() ?></h1>
 <div class="page-image">
   <?= get_the_post_thumbnail() ?>

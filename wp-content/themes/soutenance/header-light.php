@@ -36,12 +36,14 @@
       </div>
     </div>
     <figure class="site-header__figure">
-      <?= get_custom_logo() ?>
+      <a href="<?=get_home_url()?>">
+        <img src="<?= get_theme_mod("soutenance_logo-bis") ?>" alt="" class="custom-logo">
+      </a>
     </figure>
     <button id="burgerMenu" class="site-header__button-nav">
       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="10" viewBox="0 0 40 10" fill="none">
-        <rect width="40" height="3" fill="#050A3A" />
-        <rect x="19" y="7" width="21" height="3" fill="#050A3A" />
+        <rect width="40" height="3" fill="white" />
+        <rect x="19" y="7" width="21" height="3" fill="white" />
       </svg>
     </button>
   </header>
