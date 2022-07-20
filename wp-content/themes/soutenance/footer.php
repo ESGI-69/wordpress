@@ -3,14 +3,14 @@
         <img src="<?= get_theme_mod("soutenance_logo-bis") ?>" alt="" srcset="">
         <div class="team-footer">
           <div class="team-member">
-            <span class="member-name">Manager</span>
-            <span class="member-contact"><?= get_theme_mod("phone_manager") ?></span>
-            <span class="member-contact"><?= get_theme_mod("email_manager") ?></span>
+            <span class="member-name"><?= get_theme_mod("name_role_fourth") ?></span>
+            <span class="member-contact"><?= get_theme_mod("phone_role_fourth") ?></span>
+            <span class="member-contact"><?= get_theme_mod("email_role_fourth") ?></span>
           </div>
           <div class="team-member">
-            <span class="member-name">CEO</span>
-            <span class="member-contact"><?= get_theme_mod("phone_ceo") ?></span>
-            <span class="member-contact"><?= get_theme_mod("email_ceo") ?></span>
+            <span class="member-name"><?= get_theme_mod("name_role_one") ?></span>
+            <span class="member-contact"><?= get_theme_mod("phone_role_one") ?></span>
+            <span class="member-contact"><?= get_theme_mod("email_role_one") ?></span>
           </div>
         </div>
       </div>

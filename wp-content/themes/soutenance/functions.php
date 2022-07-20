@@ -34,6 +34,11 @@ function soutenance_customize_register($wp_customize)
 
   $wp_customize->add_setting('soutenance_logo-bis', array());
   $wp_customize->add_setting('soutenance_copyright', array());
+  $wp_customize->add_setting('soutenance_adresse', array());
+  $wp_customize->add_setting('soutenance_ville', array());
+  $wp_customize->add_setting('soutenance_code_postal', array());
+  $wp_customize->add_setting('soutenance_pays', array());
+
   $wp_customize->add_control(
     new WP_Customize_Image_Control(
       $wp_customize,
@@ -46,6 +51,34 @@ function soutenance_customize_register($wp_customize)
       )
     )
   );
+
+  $wp_customize->add_control('soutenance_adresse', array(
+    'label' => 'Adresse',
+    'type' => 'text',
+    'section' => 'soutenance_identity_bis',
+    'settings' => 'soutenance_adresse',
+  ));
+
+  $wp_customize->add_control('soutenance_code_postal', array(
+    'label' => 'Code Postal',
+    'type' => 'text',
+    'section' => 'soutenance_identity_bis',
+    'settings' => 'soutenance_code_postal',
+  ));
+
+  $wp_customize->add_control('soutenance_ville', array(
+    'label' => 'Ville',
+    'type' => 'text',
+    'section' => 'soutenance_identity_bis',
+    'settings' => 'soutenance_ville',
+  ));
+
+  $wp_customize->add_control('soutenance_pays', array(
+    'label' => 'Pays',
+    'type' => 'text',
+    'section' => 'soutenance_identity_bis',
+    'settings' => 'soutenance_pays',
+  ));
 
   $wp_customize->add_control('soutenance_copyright', array(
     'label' => 'Copyright',
