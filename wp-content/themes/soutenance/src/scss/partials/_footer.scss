@@ -1,0 +1,58 @@
+footer {
+  background: $main-color;
+  padding: rem(80) rem(160);
+  display: flex;
+  flex-direction: column;
+  gap: rem(76);
+
+  @media screen and (max-width: 768px) {
+    padding: rem(20); 
+  }
+
+  .footer-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
+    span {
+      color: $white;
+    }
+
+    img {
+      max-height: rem(36);
+      width: auto;
+    }
+
+    .team-footer {
+      display: flex;
+      gap: rem(100);
+      
+      .team-member {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 8px;
+      }
+      
+      span {
+        font-size: 20px;
+
+        &.member-name {
+          margin-bottom: 16px;
+          font-weight: 700;
+        }
+
+        &.member-contact {
+          margin-bottom: 0;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: rem(40);
+    }
+  }
+}
