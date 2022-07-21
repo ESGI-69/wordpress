@@ -1,0 +1,32 @@
+.our-team {
+  padding: rem(0) rem(160);
+
+  @media screen and (max-width: 768px) {
+    padding: rem(0) rem(24);
+  }
+
+  .members {
+    display: flex;
+    gap: rem(50);
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    .member {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      img {
+        width: 25vw;
+        height: auto;
+
+        @media screen and (max-width: 768px) {
+          width: 90vw;
+        }
+      }
+    }
+  }
+
+}
