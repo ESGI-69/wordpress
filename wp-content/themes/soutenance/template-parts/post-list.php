@@ -21,8 +21,9 @@
 			$post = get_post();
 			echo '<li><a href="' . get_permalink($post->ID) . '">';
 			echo '<article>';
-			echo '<h2>' . $post->post_title . '</h1>';
-			echo '';
+      echo '<img src="' . get_the_post_thumbnail_url($post->ID) . '" alt="" style="max-width: -webkit-fill-available;">';
+			echo '<h2>' . $post->post_title . '</h2>';
+			echo '<p>'. $post->post_content, 0, 200 .'</p>';
 			echo '</article></a></li>';
 		}
 		echo '</ul>';
