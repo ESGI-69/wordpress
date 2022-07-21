@@ -431,7 +431,7 @@ body main h1 {
   display: flex;
   flex-direction: column;
   z-index: -1;
-  top: -100vh;
+  top: -150vh;
   right: 0px;
   box-sizing: border-box;
   background-color: #050A3A;
@@ -751,17 +751,27 @@ body.search main h1 .underlined-gradiant {
   }
 }
 
+.page-template-partners h2 {
+  display: none;
+}
+
 .image {
   width: 100vw;
 }
 
 .our-team {
+  margin-top: 130px;
   padding: 0rem 10rem;
 }
 @media screen and (max-width: 768px) {
   .our-team {
     padding: 0rem 1.5rem;
   }
+}
+.our-team h2 {
+  font-size: 3.9375rem;
+  font-weight: 600;
+  margin-bottom: 64px;
 }
 .our-team .members {
   display: flex;
@@ -776,9 +786,14 @@ body.search main h1 .underlined-gradiant {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  margin-bottom: 132px;
+}
+.our-team .members .member h3 {
+  margin-top: 32px;
+  margin-bottom: 24px;
 }
 .our-team .members .member img {
-  width: 25vw;
+  width: 15vw;
   height: auto;
 }
 @media screen and (max-width: 768px) {
@@ -882,4 +897,11 @@ body.page.home .page-image {
 .page-template-contacts .team .location .info, .page-template-contacts .team .team-member .info {
   margin-bottom: 0;
   font-weight: 400;
+}
+.page-template-contacts .form h2 {
+  margin-bottom: 16px;
+}
+.page-template-contacts .form form input, .page-template-contacts .form form textarea {
+  background: red;
+  all: unset;
 }

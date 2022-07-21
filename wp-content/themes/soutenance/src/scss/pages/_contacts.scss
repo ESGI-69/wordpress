@@ -32,4 +32,17 @@
       }
     }
   }
+  
+  .form {
+    h2 {
+      margin-bottom: 16px;
+    }
+
+    form {
+      input, textarea {
+        background: red;
+        all: unset;
+      }
+    }
+  }
 }
