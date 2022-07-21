@@ -755,6 +755,38 @@ body.search main h1 .underlined-gradiant {
   width: 100vw;
 }
 
+.our-team {
+  padding: 0rem 10rem;
+}
+@media screen and (max-width: 768px) {
+  .our-team {
+    padding: 0rem 1.5rem;
+  }
+}
+.our-team .members {
+  display: flex;
+  gap: 3.125rem;
+}
+@media screen and (max-width: 768px) {
+  .our-team .members {
+    flex-direction: column;
+  }
+}
+.our-team .members .member {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.our-team .members .member img {
+  width: 25vw;
+  height: auto;
+}
+@media screen and (max-width: 768px) {
+  .our-team .members .member img {
+    width: 90vw;
+  }
+}
+
 body.page .page-title {
   padding: 0rem 10rem;
   margin-bottom: 8.0625rem;
@@ -817,4 +849,37 @@ body.page.home .page-image {
 .page-template-services-php .image-service {
   width: 100vw;
   height: auto;
+}
+
+.page-template-contacts .team {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6.25rem;
+  margin-top: 132px;
+}
+@media screen and (max-width: 768px) {
+  .page-template-contacts .team {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.page-template-contacts .team .location, .page-template-contacts .team .team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .page-template-contacts .team .location, .page-template-contacts .team .team-member {
+    align-items: center;
+  }
+}
+.page-template-contacts .team .location .title, .page-template-contacts .team .team-member .title {
+  font-size: 20px;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+.page-template-contacts .team .location .info, .page-template-contacts .team .team-member .info {
+  margin-bottom: 0;
+  font-weight: 400;
 }
